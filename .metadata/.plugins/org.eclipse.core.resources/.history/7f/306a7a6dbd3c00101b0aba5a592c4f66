@@ -1,0 +1,14 @@
+package com.di.property_injection;
+
+import org.springframework.context.ApplicationContext;
+
+public class Property_Injection_Main {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		ApplicationContext context = new Cl
+
+	}
+
+}

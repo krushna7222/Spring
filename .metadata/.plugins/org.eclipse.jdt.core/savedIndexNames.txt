@@ -1,0 +1,4 @@
+INDEX VERSION 1.134+D:\JAVA FullStack\Backend\Java\Fremaeworks\Spring\.metadata\.plugins\org.eclipse.jdt.core
+3102715728.index
+1865797976.index
+2533692327.index

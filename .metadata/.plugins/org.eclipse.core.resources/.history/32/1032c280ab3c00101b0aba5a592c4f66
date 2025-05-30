@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!-- bean definitions here -->
+    
+    <bean class="com.di.autowiringUsingXml.Address1" id="a1">
+    	<property name="city" value="Nashik"></property>
+    	<property name="pinCode" value="422305"></property>
+    </bean>
+    
+    <bean class="com.di.autowiringUsingXml.Person1" id="p1">
+    	<property name="name" value="Krushna Shahane"></property>
+    	<property name="age" value="21"></property>
+    	<property name="address" ref="a1"></property>
+    </bean>
+    
+        <bean class="com.di.autowiringUsingXml.Address1" id="a2">
+    	<property name="city" value="Pune"></property>
+    	<property name="pinCode" value="745862"></property>
+    </bean>
+    
+    <bean class="com.di.autowiringUsingXml.Person1" id="p2">
+    	<property name="name" value="Mahesh Sahare"></property>
+    	<property name="age" value="18"></property>
+    	<property name="address" ref="a2"></property>
+    </bean>
+    
+  </beans>
+    

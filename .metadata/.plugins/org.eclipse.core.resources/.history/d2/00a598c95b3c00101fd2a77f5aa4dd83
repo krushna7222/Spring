@@ -1,0 +1,5 @@
+package com.di.reference_injection;
+
+public class Person {
+
+}

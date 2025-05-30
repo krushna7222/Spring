@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+
+       <bean class="com.di.property_Injection.Student" id="s1">
+			<property name="studentId" value="101"></property>
+			<property name="studentName" value="Sameer Memane"></property>
+			<property name="studentPhone" value="8547693625"></property>
+			<property name="studentAddress" value="Mumbai"></property>
+       </bean>
+       
+       <bean class="com.di.property_Injection.Student" name="s2">
+			<property name="studentId" value="201"></property>
+			<property name="studentName" value="Sachin Purkar"></property>
+			<property name="studentPhone" value="9685741425"></property>
+			<property name="studentAddress" value="Nashik"></property>
+       </bean>
+       
+</beans>

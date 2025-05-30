@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!-- bean definitions here -->
+    
+    <bean class="com.di.injectingCollections.Emp" id="e1">
+    	<property name="name" value="Sachin"></property>
+    	<property name="phone">
+    		<list>
+    			<value>7485962536</value>  
+    			 <value>8569762536</value>    		
+    			  <value>9858962536</value>    		
+   				<value>7485962536</value>    		 
+    		</list>
+    	</property>
+    	<property name="address">
+    		<set>
+    			<value>Pune</value>  
+    			<value>Nashik</value>    		
+    			<value>Nagpur</value>    		
+   				<value>Nagpur</value>  
+    		</set>
+    	</property>
+    	<property name="course">
+    		<map>
+    			<entry key="Java" value="6"></entry>
+    			<entry key="Python" value="4"></entry>
+    			<entry key="React" value="2"></entry>
+    			<entry key="C" value="2"></entry>
+    		</map>
+    	</property>
+    </bean>
+    
+    
+ </beans>

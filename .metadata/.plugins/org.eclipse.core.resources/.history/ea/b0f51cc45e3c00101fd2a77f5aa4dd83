@@ -1,0 +1,5 @@
+package com.di.autowiringUsingXml;
+
+public class Person1 {
+
+}

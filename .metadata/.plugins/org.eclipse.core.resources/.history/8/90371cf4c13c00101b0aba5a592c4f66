@@ -1,0 +1,10 @@
+package com.di.property_injection_using_p_schema;
+
+public class P_Schema_Main {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!-- bean definitions here -->
+    
+    <bean class="com.di.injectingCollections.Emp" id="e1">
+    	<property name="name" value="Sachin"></property>
+    	<property name="phone">
+    		<list>
+    			<value>7485962536</value>  
+    			 <value>8569762536</value>    		
+    			  <value>9858962536</value>    		
+   				<value>7485962536</value>    		
+    			 
+    		</list>
+    	</property>
+    </bean>
+    
+    
+ </beans>

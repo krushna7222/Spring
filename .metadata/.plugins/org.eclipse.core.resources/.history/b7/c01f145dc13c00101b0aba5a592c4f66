@@ -1,0 +1,5 @@
+package com.di.property_injection_using_p_schema;
+
+public class Employee {
+
+}

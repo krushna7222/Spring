@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:p="http://www.springframework.org/schema/p"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans.xsd">
+   
+    <!-- bean definitions here -->
+
+    <!--  initializing bean using p schema -->
+     <!--  p means property schema is an alternative to the <property> tag. 
+     It is used to reduced the line of code in xml file
+       by using p schema we can initialize all the property of a bean in one line  -->   
+      
+     
+    <bean class="com.di.P_Schema_Injection.Book" id="b1" p:name="Core Java" p:author="ABC" p:price="599.98" p:quantity="157">
+      	
+    </bean>
+    
+    <bean class="com.di.p_Schema_Injection.Book" id="b2" p:name="Python" p:author="XYZ" p:price="399.98" p:quantity="111">
+    	
+    </bean>
+    
+    </beans>

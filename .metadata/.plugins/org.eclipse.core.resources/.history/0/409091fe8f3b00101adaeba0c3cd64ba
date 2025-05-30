@@ -1,0 +1,21 @@
+package com.di.injectingPrimitiveValues;
+
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
+public class Main1 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		ApplicationContext context = new ClassPathXmlApplicationContext("com//di//injectingPrimitiveValues//bean_config.hml");
+		
+		Student stud1 = (Student) context.getBean("s1");
+		Student stud2 = (Student) context.getBean("s2");
+
+		System.out.println(stud1);
+		System.out.println(stud2);
+
+	}
+
+}

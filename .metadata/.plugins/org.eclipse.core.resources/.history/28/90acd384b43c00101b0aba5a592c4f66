@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+
+ <!--  In case of autowiring byName,the name of BEAN  which we wants to inject(here,add bean of type Address1) is same as the name of property in whcih we are going to inject(here, add of type Adress1 which is defined in Person1 class)
+        
+       both Autowiring byName and autowiring byType uses SETTER injection to inject the bean of Project  into the bean of Emp
+       
+       
+       
+         -->
+         
+    <!-- bean definitions here -->
+    
+    <bean class="com.di.autowiringUsingXml.Address1" id="add">
+    	<property name="city" value="Nashik"></property>
+    	<property name="pinCode" value="422305"></property>
+    </bean>
+    
+    <bean class="com.di.autowiringUsingXml.Person1" id="p1" autowire="byName">
+    	<property name="add" ref="add"></property>
+    </bean>
+    
+  </beans>
+    

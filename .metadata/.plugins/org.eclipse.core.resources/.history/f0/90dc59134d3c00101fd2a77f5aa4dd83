@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!-- bean definitions here -->
+    
+    <bean class="com.di.Schema_Injection.Book" id="b1">
+    	<property name="name" value="Core Java"></property>
+    	<property name="author" value="XYZ"></property>
+    	<property name="price" value="799.99"></property>
+    	<property name="quantity" value="171"></property>    	
+    </bean>
+    
+    <bean class="com.di.Schema_Injection.Book" id="b2">
+    	<property name="name" value="Python"></property>
+    	<property name="author" value="ABC"></property>
+    	<property name="price" value="499.99"></property>
+    	<property name="quantity" value="131"></property>    	
+    </bean>
+    
+    </beans>

@@ -1,0 +1,30 @@
+package com.di.autowiringUsingXml;
+
+public class Person1 {
+	
+	private Address1 address;
+	
+	public Person1() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+
+	public Person1(Address1 address) {
+		super();
+		this.address = address;
+	}
+
+	public Address1 getAddress() {
+		return address;
+	}
+
+	public void setAddress(Address1 address) {
+		this.address = address;
+	}
+
+	@Override
+	public String toString() {
+		return "Person1 [address=" + address + "]";
+	}
+
+}
