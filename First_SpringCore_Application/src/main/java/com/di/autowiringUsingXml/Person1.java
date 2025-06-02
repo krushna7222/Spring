@@ -12,13 +12,16 @@ public class Person1 {
 	public Person1(Address1 add) {
 		super();
 		this.add = add;
+		System.out.println("in parameterised Constructor....");
 	}
 
 	public Address1 getAdd() {
+		System.out.println("in setter....");
 		return add;
 	}
 
 	public void setAdd(Address1 add) {
+		System.out.println("in setter....");
 		this.add = add;
 	}
 
