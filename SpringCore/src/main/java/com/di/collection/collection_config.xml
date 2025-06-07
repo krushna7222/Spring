@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:p="http://www.springframework.org/schema/p"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans 
+                           http://www.springframework.org/schema/beans/spring-beans.xsd
+                           http://www.springframework.org/schema/context 
+                           http://www.springframework.org/schema/context/spring-context.xsd">
+
+
+       <bean class="com.di.collection.Emp" name="emp1">
+       		<property name="id" value="101" />
+       		<property name="name" value="Mahesh Koli" />
+       		<property name="phones">
+       			<list>
+       				<value>7485964152</value>
+       				<value>8596743614</value>
+       				<value>96857449874</value>
+       				<value>7485964152</value>
+       			</list>
+       		</property>
+       		<property name="addresses">
+       			<set>
+       				<value>Pune</value>
+       				<value>Mumbai</value>
+       				<value>Nashik</value>
+       				<value>Pune</value>
+       			</set>
+       		</property>
+       		<property name="courses">
+       			<map>
+       				<entry key="Java" value="5"></entry>
+       				<entry key="python" value="4"></entry>
+       				<entry key="c programming" value="2"></entry>
+       				<entry key="React" value="2"></entry>
+       			</map>
+       		</property>
+       		<property name="props">
+       			<props>
+       				<prop key="URI">http://localhost/3306</prop>
+       				<prop key="USER">root</prop>
+       				<prop key="Pass">Patil@2003</prop>
+       			</props>
+       		</property>
+       
+       </bean>
+       
+</beans>
