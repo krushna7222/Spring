@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+
+<!--       
+2.byName => uses setter injection => bean name is same as property name(in which we wants to inject the bean)
+3.byType=>  uses setter injection=> bean name not to be same as property name
+4.constructor =>  uses constructor injection =>bean name not to be same as property name
+    -->
+    
+
+
+    <bean class="com.di.autowiringUsingXml.Address1" id="a3">
+    	<property name="city" value="Jaypur"></property>
+    	<property name="pinCode" value="852963"></property>
+    </bean>
+    
+    <bean class="com.di.autowiringUsingXml.Person1" id="p3" autowire="constructor">
+		<!-- <property name="add" ref="add"></property> --> 
+    </bean>
+    
+  </beans>
+    
