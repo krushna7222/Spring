@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+ https://www.springframework.org/schema/beans/spring-beans.xsd
+ http://www.springframework.org/schema/context
+ http://www.springframework.org/schema/context/spring-context.xsd">
+
+	<!-- here, more than one bean of Address2 class is available to inject into 
+		another bean(Person2) so in that case spring IOC container gets Confused/ambiguity 
+		that which bean user wants to Inject in Person2 and in that case spring IOC 
+		container will throw an Exception. So to resolve this problem of ambiguity 
+		we need to use @Qualifier("name of bean which user wants to inject") annotation 
+		in Person2(main bean) just above the name of the property -->
+
+	<!-- this tag is used to enable annotations which we are used in SpringCore 
+		application -->
+	<context:annotation-config></context:annotation-config>
+	
+	
+	<bean class="com.di.assignment.Customer" name="c1">
+		<property name="customerAccountNumber" value="654321" />
+		<property name="customerName" value="Vishal Loharkar" />
+		<property name="phone" value="9685744152" />
+		<property name="address" value="Devgoan" />
+	</bean>
+
+	<!-- <bean class="com.di.assignment.Customer" name="c2">
+		<property name="customerAccountNumber" value="741852" />
+		<property name="customerName" value="Jivan Nathe" />
+		<property name="phone" value="8574965263" />
+		<property name="address" value="Ghoti" />
+	</bean> -->
+	
+	<bean class="com.di.assignment.Bank" name="b2" />
+	
+</beans>
