@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.springframework.org/schema/beans
+  https://www.springframework.org/schema/beans/spring-beans.xsd">
+  
+  
+  
+   <bean class="com.demo.CIMap.Employee" id="emp1">
+    
+          <constructor-arg>
+              <map>
+                <entry key="11" value="meena"/>
+                  <entry key="12" value="heena"/>
+                    <entry key="13" value="reena"/>
+             </map>
+          
+          </constructor-arg>
+          
+    </bean>
+ 
+  
+ 
+ 
+
+    <bean class="com.demo.CIMap.Department" id="d1">
+        <constructor-arg value="1111" />
+        <constructor-arg value="IT_depart" />
+    </bean>
+     
+         <bean class="com.demo.CIMap.Department" id="d2">
+        <constructor-arg value="1001" />
+        <constructor-arg value="Sales_depart" />
+    </bean>
+     
+     
+       
+   <bean class="com.demo.CIMap.Employee" id="emp2">
+    
+          <constructor-arg>
+              <map>
+                <entry key="11" value="meena"/>
+                  <entry key="12" value="heena"/>
+                    <entry key="13" value="reena"/>
+             </map>
+             
+     
+         </constructor-arg>
+         
+           <constructor-arg>
+              <map>
+                <entry key="101" value-ref="d1"/>
+                  <entry key="102" value-ref="d2"/>
+                   
+             </map>
+             
+     
+         </constructor-arg>
+          
+    </bean>
+   
+</beans>
