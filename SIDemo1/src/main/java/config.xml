@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.springframework.org/schema/beans
+  https://www.springframework.org/schema/beans/spring-beans.xsd">
+  
+  
+    <bean class="com.demo.SIDemo1.DOJ" id="d1">
+ 
+         <property name="date" value="11" /> 
+         <property name="year" value="2024" />  
+         <property name="month" value="june" />
+          
+    </bean>
+  
+ 
+  <bean class="com.demo.SIDemo1.Employee" id="emp1">
+ 
+         <property name="id" value="11" /> 
+         <property name="name" value="Karan" />  
+         <property name="doj" ref="d1" />
+          <property name="designation">
+             <list>
+              <value>Devoloper</value>
+              <value>Designer</value>
+             <value>Testing</value>
+             </list>
+          </property>
+    </bean>
+
+ 
+</beans>
