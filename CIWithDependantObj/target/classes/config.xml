@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.springframework.org/schema/beans
+  https://www.springframework.org/schema/beans/spring-beans.xsd">
+  
+  
+  
+   <bean class="com.demo.CIWithDependantObj.DOJ" id="doj">
+    
+          <constructor-arg  value="2"  type="int" />
+          <constructor-arg  value="2005" type="int" />
+          <constructor-arg value="June" />
+          
+    </bean>
+ 
+ 
+  <bean class="com.demo.CIWithDependantObj.Employee" id="emp1">
+    
+          <constructor-arg  value="22"  type="int" />
+          <constructor-arg  value="Keshav" />
+          <constructor-arg value="22000" />
+          <constructor-arg>
+                  <ref bean="doj" />
+          </constructor-arg>
+          
+          
+    </bean>
+ 
+ 
+   <bean class="com.demo.CIWithDependantObj.Employee" id="emp2">
+    
+          <constructor-arg  value="23"  type="int" />
+          <constructor-arg  value="Jivan" />
+          <constructor-arg value="23000" />
+          <constructor-arg>
+                  <ref bean="doj" />
+          </constructor-arg>
+          <constructor-arg>
+            <list>
+                <value>Devoloper</value>
+                <value>Designer</value>
+                <value>TeamLeader</value>
+            </list>
+          </constructor-arg>
+          
+    </bean>
+    
+     
+        <bean class="com.demo.CIWithDependantObj.Address" id="add1">
+            <constructor-arg value="Pune"  />
+            <constructor-arg value="maharashtra" />
+        </bean>
+     
+       <bean class="com.demo.CIWithDependantObj.Address" id="add2">
+            <constructor-arg value="Surat"  />
+            <constructor-arg value="Gujrat" />
+        </bean>
+     
+     
+     
+     
+   <bean class="com.demo.CIWithDependantObj.Employee" id="emp3">
+    
+          <constructor-arg  value="24"  type="int" />
+          <constructor-arg  value="Mahesh" />
+          <constructor-arg value="25000" />
+          <constructor-arg>
+                  <ref bean="doj" />
+          </constructor-arg>
+          <constructor-arg>
+            <list>
+                <value>Devoloper</value>
+                <value>Designer</value>
+                <value>TeamLeader</value>
+            </list>
+          </constructor-arg>
+          <constructor-arg>
+              <list>
+                 <ref bean="add1"/>
+               <ref bean="add2"/>
+              
+              </list>
+          
+          </constructor-arg>
+          
+          
+          
+    </bean>
+ 
+ 
+</beans>
